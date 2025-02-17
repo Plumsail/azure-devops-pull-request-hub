@@ -416,15 +416,6 @@ export class PullRequestModel {
   private async getPullRequestPolicyAsync() {
     let self = this;
 
-    ///** Work in Progress :-) */
-    // const details = await getPullRequestOverallStatus(
-    //   this.baseHostUrl,
-    //   DevOps.getHost().name,
-    //   this.gitPullRequest.repository.project,
-    //   this.gitPullRequest.repository,
-    //   this
-    // );
-
     const policies = await getEvaluationsPerPullRequest(
       this.baseHostUrl,
       this.gitPullRequest.repository.project,

@@ -14,7 +14,6 @@ import {
   isLocalStorageAvailable,
 } from "./common";
 import { PullRequestsTab } from "./tabs/PullRequestsTab";
-import { addPolyFills } from "./polyfills";
 import { PullRequestStatus } from "azure-devops-extension-api/Git/Git";
 import { ObservableValue } from "azure-devops-ui/Core/Observable";
 import { Observer } from "azure-devops-ui/Observer";
@@ -34,8 +33,6 @@ interface IHubContentState {
   projects: TeamProjectReference[];
   loading: boolean;
 }
-
-addPolyFills();
 
 export class App extends React.Component<{}, IHubContentState> {
   private toastRef: React.RefObject<Toast> = React.createRef<Toast>();

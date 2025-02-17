@@ -17,64 +17,12 @@ import { compare } from "../lib/date";
 
 export const refsPreffix = "refs/heads/";
 
-export const approvedLightColor: IColor = {
-  red: 231,
-  green: 242,
-  blue: 231,
-};
-
-export const approvedWithSuggestionsLightColor: IColor = {
-  red: 231,
-  green: 242,
-  blue: 231,
-};
-
-export const noVoteLightColor: IColor = {
-  red: 218,
-  green: 227,
-  blue: 243,
-};
-
-export const waitingAuthorLightColor: IColor = {
-  red: 255,
-  green: 249,
-  blue: 230,
-};
-
-export const rejectedLightColor: IColor = {
-  red: 250,
-  green: 235,
-  blue: 235,
-};
-
-export const autoCompleteColor: IColor = {
-  red: 235,
-  green: 121,
-  blue: 8,
-};
-
-export const reviewerVoteToIColorLight = (vote: number | string) => {
-  const colorMap: Record<string, IColor> = {
-    "10": approvedLightColor,
-    "5": approvedWithSuggestionsLightColor,
-    "0": noVoteLightColor,
-    "-5": waitingAuthorLightColor,
-    "-10": rejectedLightColor,
-  };
-  return colorMap[vote];
-};
-
 export enum ReviewerVoteOption {
   Approved = 10,
   ApprovedWithSuggestions = 5,
   Rejected = -10,
   WaitingForAuthor = -5,
   NoVote = 0,
-}
-
-export enum YesOrNo {
-  No = 0,
-  Yes = 1,
 }
 
 export enum AlternateStatusPr {
@@ -123,36 +71,6 @@ export interface IStatusIndicatorData {
   statusProps: IStatusProps;
   label: string;
 }
-
-export const approvedColor: IColor = {
-  red: 51,
-  green: 204,
-  blue: 51,
-};
-
-export const waitingAuthorColor: IColor = {
-  red: 179,
-  green: 179,
-  blue: 0,
-};
-
-export const approvedWithSuggestionsColor: IColor = {
-  red: 0,
-  green: 204,
-  blue: 153,
-};
-
-export const noVoteColor: IColor = {
-  red: 230,
-  green: 230,
-  blue: 230,
-};
-
-export const rejectedColor: IColor = {
-  red: 151,
-  green: 30,
-  blue: 79,
-};
 
 export const draftColor: IColor = {
   red: 14,
